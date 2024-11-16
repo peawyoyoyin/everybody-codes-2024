@@ -1,8 +1,11 @@
 import { Quest } from "./runner";
 import { expect, test, } from "bun:test";
 
-type TestCaseSpec = [input: string, expected: number | string]
-type TestCaseSpecWithCaseNumber = [tcNumber: number, ...TestCaseSpec]
+type TestCaseSpec = {
+    input: string
+    expected: number | string
+}
+type TestCaseSpecWithCaseNumber = [tcNumber: number, spec: TestCaseSpec]
 
 interface TestQuestSpec {
     part1Cases?: TestCaseSpec[]
@@ -12,10 +15,7 @@ interface TestQuestSpec {
 
 const addTestCaseNumber =
         (cases: TestCaseSpec[]): TestCaseSpecWithCaseNumber[] =>
-                cases.map((cse, i) => {
-                    const [input, expected] = cse;
-                    return [i+1, input, expected] as const;
-                })
+                cases.map((cse, i) => [i+1, cse] as const)
 
 const executeTest =
     (QuestClass: new () => Quest) =>
@@ -26,7 +26,7 @@ const executeTest =
                         addTestCaseNumber(testCases),
                     )(
                         `${label}: case %d`,
-                        (_, input, expected) => {
+                        (_, { input, expected }) => {
                             const quest = new QuestClass();
                             expect(execution(quest, input)).toBe(expected.toString());
                         }

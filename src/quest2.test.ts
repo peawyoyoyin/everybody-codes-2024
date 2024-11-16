@@ -5,72 +5,82 @@ import { describe } from "bun:test";
 describe("quest2", () => {
     testQuest(Quest2)({
         part1Cases: [
-            [
-    `WORDS:THE,OWE,MES,ROD,HER
+            {
+                input:
+`WORDS:THE,OWE,MES,ROD,HER
     
 AWAKEN THE POWER ADORNED WITH THE FLAMES BRIGHT IRE`,
-                4
-            ],
-            [
-    `WORDS:THE,OWE,MES,ROD,HER
+                expected: 4
+            },
+            {
+                input:
+`WORDS:THE,OWE,MES,ROD,HER
     
 THE FLAME SHIELDED THE HEART OF THE KINGS`,
-                3
-            ],
-            [
-    `WORDS:THE,OWE,MES,ROD,HER
+                expected: 3
+            },
+            {
+                input:
+`WORDS:THE,OWE,MES,ROD,HER
     
 POWE PO WER P OWE R`,
-                2
-            ],
-            [
-    `WORDS:THE,OWE,MES,ROD,HER
+                expected: 2
+            },
+            {
+                input:
+`WORDS:THE,OWE,MES,ROD,HER
     
 THERE IS THE END`,
-                3
-            ]
+                expected: 3
+            }
         ],
         part2Cases: [
-            [
-    `WORDS:THE,OWE,MES,ROD,HER
+            {
+                input:
+`WORDS:THE,OWE,MES,ROD,HER
     
 AWAKEN THE POWER ADORNED WITH THE FLAMES BRIGHT IRE`,
-                15
-            ],
-            [
-    `WORDS:THE,OWE,MES,ROD,HER
+                expected: 15
+            },
+            {
+                input:
+`WORDS:THE,OWE,MES,ROD,HER
     
 THE FLAME SHIELDED THE HEART OF THE KINGS`,
-                9
-            ],
-            [
-    `WORDS:THE,OWE,MES,ROD,HER
+                expected: 9
+            },
+            {
+                input:
+`WORDS:THE,OWE,MES,ROD,HER
     
 POWE PO WER P OWE R`,
-                6
-            ],
-            [
-    `WORDS:THE,OWE,MES,ROD,HER
+                expected: 6
+            },
+            {
+                input:
+`WORDS:THE,OWE,MES,ROD,HER
     
 THERE IS THE END`,
-                7
-            ],
-            [
-    `WORDS:CC
+                expected: 7
+            },
+            {
+                input:
+`WORDS:CC
     
 CCC`,
-                3
-            ]
+                expected: 3
+            }
         ],
         part3Cases: [
-            [
-    `WORDS:THE,OWE,MES,ROD,RODEO
+            {
+                input:
+`WORDS:THE,OWE,MES,ROD,RODEO
     
 HELWORLT
 ENIGWDXL
 TRODEOAL`,
-                10
-            ]
+                expected: 10
+            }
         ]
     })
 })

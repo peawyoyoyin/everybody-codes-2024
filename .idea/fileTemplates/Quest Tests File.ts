@@ -1,26 +1,26 @@
-import { $Quest_name } from "./${$Quest_name.toLowerCase()}";
+import { $Quest_name } from "./${Quest_name.toLowerCase()}";
 import { testQuest } from "./common/testRunner";
 import { describe } from "bun:test";
 
-describe("$Quest_name", () => {
+describe("${Quest_name.toLowerCase()}", () => {
     testQuest($Quest_name)({
         part1Cases: [
-            [
-                "input"
-                "expected"
-            ],
+            {
+                input: "input",
+                expected: "expected"
+            },
         ],
         part2Cases: [
-            [
-                "input"
-                "expected"
-            ]
-        ]
+            {
+                input: "input",
+                expected: "expected"
+            }
+        ],
         part3Cases: [
-            [
-                "input"
-                "expected"
-            ]
+            {
+                input: "input",
+                expected: "expected"
+            }
         ]
     })
 })

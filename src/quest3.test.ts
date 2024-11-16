@@ -5,7 +5,8 @@ import { describe } from "bun:test";
 describe("quest3", () => {
     testQuest(Quest3)({
         part1Cases: [
-            [
+            {
+                input:
 `..........
 ..###.##..
 ...####...
@@ -13,11 +14,12 @@ describe("quest3", () => {
 ..######..
 ...####...
 ..........`,
-                35
-            ]
+                expected: 35
+            }
         ],
         part3Cases: [
-            [
+            {
+                input:
 `..........
 ..###.##..
 ...####...
@@ -25,8 +27,8 @@ describe("quest3", () => {
 ..######..
 ...####...
 ..........`,
-                29
-            ]
+                expected: 29
+            }
         ]
     });
 })
