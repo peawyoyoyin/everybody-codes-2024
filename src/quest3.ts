@@ -140,8 +140,5 @@ export class Quest3 implements Quest {
 }
 
 if (import.meta.main) {
-    Runner.run(
-        './inputs/quest3',
-        new Quest3()
-    );
+    Runner.run('./inputs/quest3', new Quest3());
 }
