@@ -136,7 +136,6 @@ export class Quest3 implements Quest {
 
         return result.toString();
     }
-
 }
 
 if (import.meta.main) {
