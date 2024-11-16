@@ -1,4 +1,4 @@
-import { Quest, Runner } from "./runner";
+import { Quest, Runner } from "./common/runner";
 import { EOL } from 'node:os'
 
 export class Quest2 implements Quest {
@@ -193,4 +193,6 @@ export class Quest2 implements Quest {
     }
 }
 
-Runner.run('./inputs/quest2', new Quest2());
+if (import.meta.main) {
+    Runner.run('./inputs/quest2', new Quest2());
+}

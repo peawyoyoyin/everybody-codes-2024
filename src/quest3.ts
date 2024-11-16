@@ -1,4 +1,4 @@
-import { Quest, Runner } from "./runner";
+import { Quest, Runner } from "./common/runner";
 import { EOL } from "node:os";
 
 export class Quest3 implements Quest {
@@ -124,9 +124,9 @@ export class Quest3 implements Quest {
             }
         }
 
-        for (let row of state) {
-            console.log(row.map(cell => cell.toString(16)).join(''))
-        }
+        // for (let row of state) {
+        //     console.log(row.map(cell => cell.toString(16)).join(''))
+        // }
         let result = 0;
         for (let y = 0; y < maxRows; y++) {
             for (let x = 0; x < maxCols; x++) {
@@ -139,7 +139,9 @@ export class Quest3 implements Quest {
 
 }
 
-Runner.run(
-    './inputs/quest3',
-    new Quest3()
-)
+if (import.meta.main) {
+    Runner.run(
+        './inputs/quest3',
+        new Quest3()
+    );
+}

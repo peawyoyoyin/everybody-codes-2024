@@ -1,4 +1,4 @@
-import { Runner, Quest } from "./runner";
+import { Runner, Quest } from "./common/runner";
 
 export class Quest1 implements Quest {
     private potionCost(enemy: string): number {
@@ -67,4 +67,6 @@ export class Quest1 implements Quest {
     }
 }
 
-Runner.run('./inputs/quest1', new Quest1());
+if (import.meta.main) {
+    Runner.run('./inputs/quest1', new Quest1());
+}
