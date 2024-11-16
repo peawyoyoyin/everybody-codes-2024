@@ -1,0 +1,14 @@
+{
+  "name": "ebc2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.13",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
